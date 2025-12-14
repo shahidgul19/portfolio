@@ -16,7 +16,7 @@ body.light .work-title {
 }
 
 /* NAVBAR */
-.navbar { position:absolute; top:0; width:100%; padding:20px 80px; display:flex; justify-content:space-evenly; z-index:10; }
+.navbar { position:relative; top:0; width:100%; padding:20px 80px; display:flex; justify-content:space-evenly; z-index:10; }
 .nav-links { display:flex; gap:40px; }
 .nav-links a { color:inherit; font-weight:600; text-decoration:none; letter-spacing:0.5px; transition:.3s; }
 .nav-links a:hover { color:#7c3aed; }

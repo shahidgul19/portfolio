@@ -94,8 +94,8 @@ body.light .gradient-circle {
 .theme-switch {
   position: fixed;
   top: 20px;
-  right: 100px;
-  z-index: 1000;
+  right: 20px;
+  z-index: 1001;
   cursor: pointer;
   font-size: 24px;
   display: flex;
@@ -107,6 +107,7 @@ body.light .gradient-circle {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(124, 58, 237, 0.2);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .theme-switch:hover {
@@ -117,6 +118,10 @@ body.light .gradient-circle {
 body.light .theme-switch {
   background: rgba(0, 0, 0, 0.05);
   border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .theme-switch:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /* ===== NAVBAR ===== */
@@ -185,7 +190,8 @@ body.light .navbar {
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
@@ -287,12 +293,13 @@ body.light .hero-subtitle {
   align-items: center;
   gap: 10px;
   font-size: 15px;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, #7c3aed, #ff6b6b);
   color: #ffffff;
-  border: none;
 }
 
 .btn-primary:hover {

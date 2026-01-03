@@ -89,9 +89,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Teko:wght@400;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
@@ -103,6 +101,13 @@
 
 <body class="dark">
 
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="gradient-circle circle-1"></div>
+    <div class="gradient-circle circle-2"></div>
+    <div class="gradient-circle circle-3"></div>
+  </div>
+
   <!-- THEME SWITCH -->
   <div class="theme-switch" aria-label="Toggle dark/light theme">
     <span class="sun" aria-hidden="true">☀️</span>
@@ -111,21 +116,49 @@
 
   <!-- NAVBAR -->
   <header class="navbar" role="banner">
-    <div class="logo">⚡ Shahid.dev</div>
+    <div class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">Shahid.dev</span>
+    </div>
     <nav class="nav-links" role="navigation" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about-section">About</a>
-      <a href="#work">Work</a>
-      <a href="#tech-stack">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about-section" class="nav-link">About</a>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#tech-stack" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-content parallax" data-depth="0.4">
-      <h1>Hi, I'm <span>Shahid Gul</span> - Frontend Developer</h1>
-      <p>I craft immersive web experiences with animation & clean architecture. Specializing in React, JavaScript, and modern frontend development.</p>
+      <div class="hero-badge">👋 Welcome to my portfolio</div>
+      <h1>
+        Hi, I'm <span class="gradient-text">Shahid Gul</span><br>
+        <span class="typing-text">Frontend Developer</span>
+      </h1>
+      <p class="hero-subtitle">
+        I craft immersive web experiences with animation & clean architecture. 
+        Specializing in React, JavaScript, and modern frontend development.
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        <a href="#work" class="btn btn-secondary">View Work</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+      </div>
     </div>
 
     <div class="hero-visual parallax" data-depth="0.8">
@@ -135,46 +168,94 @@
           <span class="dot yellow" aria-hidden="true"></span>
           <span class="dot green" aria-hidden="true"></span>
         </div>
-        <pre class="code">
-<span class="kw">const</span> <span class="func">life</span> = <span class="kw">async function</span> <span class="func">Life</span>() {
-  <span class="kw">const</span> <span class="var">work</span> = <span class="kw">await</span> <span class="func">Work</span>();
-
-  <span class="kw">if</span> (!work) {
-    <span class="kw">return</span> <span class="str">"Take a rest"</span>;
+        <pre class="code"><span class="kw">const</span> <span class="func">developer</span> = {
+  <span class="prop">name</span>: <span class="str">"Shahid Gul"</span>,
+  <span class="prop">role</span>: <span class="str">"Frontend Engineer"</span>,
+  <span class="prop">location</span>: <span class="str">"Srinagar, India"</span>,
+  
+  <span class="kw">skills</span>: [
+    <span class="str">"React"</span>, <span class="str">"JavaScript"</span>,
+    <span class="str">"HTML/CSS"</span>, <span class="str">"GSAP"</span>
+  ],
+  
+  <span class="func">createMagic</span>: <span class="kw">function</span>() {
+    <span class="kw">return</span> <span class="str">"Beautiful Interfaces ✨"</span>;
   }
-
-  <span class="kw">return</span> <span class="str">"Don't give up on your dreams"</span>;
-}();
-    </pre>
+};</pre>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="section about-section" id="about-section">
+    <div class="section-header">
+      <span class="section-badge">Get To Know Me</span>
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Frontend Developer from Srinagar, India</p>
+    </div>
+
     <div class="about-grid">
       <div class="about-text">
-        <h2>About Me - Frontend Developer from Srinagar</h2>
-        <p>
-          I'm Shahid Gul — a frontend developer and web designer from Srinagar, Jammu and Kashmir, focused on
-          building high-performance, animated, and visually refined web interfaces using React, JavaScript, and modern CSS frameworks.
-        </p>
-        <ul>
-          <li>🎓 MCA Graduate - Master of Computer Applications</li>
-          <li>📍 Natipora, Srinagar, Jammu and Kashmir, India</li>
-          <li>💻 Frontend Engineer & UI Developer</li>
-          <li>⚡ Specialized in React, JavaScript, HTML5, CSS3</li>
-        </ul>
+        <div class="about-content">
+          <p class="lead-text">
+            I'm <strong>Shahid Gul</strong> — a passionate frontend developer and web designer 
+            from Srinagar, Jammu and Kashmir, specializing in building high-performance, 
+            animated, and visually stunning web interfaces.
+          </p>
+          <p>
+            With a Master's degree in Computer Applications (MCA), I combine technical 
+            expertise with creative design to deliver exceptional digital experiences. 
+            My focus is on creating responsive, accessible, and user-friendly applications 
+            using modern technologies like React, JavaScript, and cutting-edge CSS frameworks.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🎓</span>
+              <div>
+                <strong>MCA Graduate</strong>
+                <p>Master of Computer Applications</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📍</span>
+              <div>
+                <strong>Based in Srinagar</strong>
+                <p>Jammu and Kashmir, India</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">💼</span>
+              <div>
+                <strong>Frontend Engineer</strong>
+                <p>UI/UX & Motion Design</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <div>
+                <strong>Tech Stack</strong>
+                <p>React, JavaScript, HTML5, CSS3</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="about-visual parallax" data-depth="0.6">
         <div class="code-card mini" role="img" aria-label="Developer focus code snippet">
-          <pre class="code">
-<span class="kw">export</span> <span class="kw">default</span> {
-  <span class="prop">focus</span>: <span class="str">'UI / Motion'</span>,
-  <span class="prop">stack</span>: <span class="str">'JS, React'</span>
-}
-</pre>
+          <div class="code-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <pre class="code"><span class="kw">export default</span> {
+  <span class="prop">passion</span>: <span class="str">"Creating"</span>,
+  <span class="prop">focus</span>: <span class="str">"UI/UX & Motion"</span>,
+  <span class="prop">motto</span>: <span class="str">"Code with ❤️"</span>
+}</pre>
+        </div>
+        <div class="about-image-placeholder">
+          <div class="profile-decoration"></div>
         </div>
       </div>
     </div>
@@ -182,143 +263,322 @@
 
   <!-- WORK -->
   <section class="section" id="work">
-    <h2 class="work-title">Selected Web Development Projects</h2>
+    <div class="section-header">
+      <span class="section-badge">Portfolio</span>
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-subtitle">Showcasing my best web development work</p>
+    </div>
+
     <div class="cards">
-      <article class="card">
-        <h3>Restaurant Platform</h3>
-        <p>Full-stack restaurant ordering system with React</p>
+      <article class="card" data-category="web-app">
+        <div class="card-image">
+          <div class="card-overlay">
+            <span class="card-tag">Full Stack</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Restaurant Platform</h3>
+          <p>Full-stack restaurant ordering system built with React, Node.js, and MongoDB. Features real-time order tracking and payment integration.</p>
+          <div class="card-tech">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MongoDB</span>
+          </div>
+        </div>
       </article>
-      <article class="card">
-        <h3>Portfolio System</h3>
-        <p>Animated portfolio builder with GSAP</p>
+
+      <article class="card" data-category="web-design">
+        <div class="card-image">
+          <div class="card-overlay">
+            <span class="card-tag">Frontend</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>Portfolio Builder</h3>
+          <p>Animated portfolio creation system with drag-and-drop interface, powered by GSAP animations and modern React architecture.</p>
+          <div class="card-tech">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">GSAP</span>
+            <span class="tech-badge">Tailwind</span>
+          </div>
+        </div>
       </article>
-      <article class="card">
-        <h3>Web App UI</h3>
-        <p>Modern SaaS dashboard interface</p>
+
+      <article class="card" data-category="ui-ux">
+        <div class="card-image">
+          <div class="card-overlay">
+            <span class="card-tag">UI/UX</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <h3>SaaS Dashboard</h3>
+          <p>Modern SaaS dashboard interface with data visualization, analytics charts, and responsive design for seamless user experience.</p>
+          <div class="card-tech">
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Chart.js</span>
+            <span class="tech-badge">CSS3</span>
+          </div>
+        </div>
       </article>
     </div>
   </section>
 
   <!-- TECH STACK -->
   <section class="section" id="tech-stack">
-    <h2>Tech Stack & Skills</h2>
+    <div class="section-header">
+      <span class="section-badge">Technologies</span>
+      <h2 class="section-title">Tech Stack & Skills</h2>
+      <p class="section-subtitle">Tools and technologies I work with</p>
+    </div>
+
     <div class="tech-grid">
-      <div class="tech-card">
-        <img src="img/js.png" alt="JavaScript logo" width="60" height="60" loading="lazy" />
-        <span>JavaScript</span>
+      <div class="tech-card" data-skill="90">
+        <div class="tech-icon">
+          <img src="img/js.png" alt="JavaScript logo" width="48" height="48" loading="lazy" />
+        </div>
+        <h3>JavaScript</h3>
+        <p>ES6+, Modern JS</p>
         <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
           <div class="skill-fill" data-width="90%"></div>
         </div>
+        <span class="skill-percentage">90%</span>
       </div>
-      <div class="tech-card">
-        <img src="img/html.png" alt="HTML5 logo" width="60" height="60" loading="lazy" />
-        <span>HTML5</span>
+
+      <div class="tech-card" data-skill="95">
+        <div class="tech-icon">
+          <img src="img/html.png" alt="HTML5 logo" width="48" height="48" loading="lazy" />
+        </div>
+        <h3>HTML5</h3>
+        <p>Semantic HTML</p>
         <div class="skill-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
           <div class="skill-fill" data-width="95%"></div>
         </div>
+        <span class="skill-percentage">95%</span>
       </div>
-      <div class="tech-card">
-        <img src="img/css-3.png" alt="CSS3 logo" width="60" height="60" loading="lazy" />
-        <span>CSS3</span>
+
+      <div class="tech-card" data-skill="90">
+        <div class="tech-icon">
+          <img src="img/css-3.png" alt="CSS3 logo" width="48" height="48" loading="lazy" />
+        </div>
+        <h3>CSS3</h3>
+        <p>Animations & Grid</p>
         <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
           <div class="skill-fill" data-width="90%"></div>
         </div>
+        <span class="skill-percentage">90%</span>
       </div>
-      <div class="tech-card">
-        <img src="img/tailwind.png" alt="Tailwind CSS logo" width="60" height="60" loading="lazy" />
-        <span>Tailwind CSS</span>
+
+      <div class="tech-card" data-skill="85">
+        <div class="tech-icon">
+          <img src="img/atom.png" alt="React logo" width="48" height="48" loading="lazy" />
+        </div>
+        <h3>React</h3>
+        <p>Hooks & Components</p>
+        <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+          <div class="skill-fill" data-width="85%"></div>
+        </div>
+        <span class="skill-percentage">85%</span>
+      </div>
+
+      <div class="tech-card" data-skill="80">
+        <div class="tech-icon">
+          <img src="img/tailwind.png" alt="Tailwind CSS logo" width="48" height="48" loading="lazy" />
+        </div>
+        <h3>Tailwind CSS</h3>
+        <p>Utility-First CSS</p>
         <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
           <div class="skill-fill" data-width="80%"></div>
         </div>
+        <span class="skill-percentage">80%</span>
       </div>
-      <div class="tech-card">
-        <img src="img/bootstrap.png" alt="Bootstrap logo" width="60" height="60" loading="lazy" />
-        <span>Bootstrap</span>
+
+      <div class="tech-card" data-skill="75">
+        <div class="tech-icon">
+          <img src="img/bootstrap.png" alt="Bootstrap logo" width="48" height="48" loading="lazy" />
+        </div>
+        <h3>Bootstrap</h3>
+        <p>Responsive Design</p>
         <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
           <div class="skill-fill" data-width="75%"></div>
         </div>
+        <span class="skill-percentage">75%</span>
       </div>
-      <div class="tech-card">
-        <img src="img/sass.png" alt="SASS logo" width="60" height="60" loading="lazy" />
-        <span>SASS</span>
+
+      <div class="tech-card" data-skill="70">
+        <div class="tech-icon">
+          <img src="img/sass.png" alt="SASS logo" width="48" height="48" loading="lazy" />
+        </div>
+        <h3>SASS</h3>
+        <p>CSS Preprocessor</p>
         <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
           <div class="skill-fill" data-width="70%"></div>
         </div>
+        <span class="skill-percentage">70%</span>
       </div>
-      <div class="tech-card">
-        <img src="img/atom.png" alt="React logo" width="60" height="60" loading="lazy" />
-        <span>React</span>
-        <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-          <div class="skill-fill" data-width="85%"></div>
+
+      <div class="tech-card" data-skill="80">
+        <div class="tech-icon">
+          <img src="img/social.png" alt="Git logo" width="48" height="48" loading="lazy" />
         </div>
-      </div>
-      <div class="tech-card">
-        <img src="img/social.png" alt="Git logo" width="60" height="60" loading="lazy" />
-        <span>Git</span>
+        <h3>Git</h3>
+        <p>Version Control</p>
         <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
           <div class="skill-fill" data-width="80%"></div>
         </div>
+        <span class="skill-percentage">80%</span>
       </div>
-      <div class="tech-card">
-        <img src="img/github.png" alt="GitHub logo" width="60" height="60" loading="lazy" />
-        <span>GitHub</span>
+
+      <div class="tech-card" data-skill="85">
+        <div class="tech-icon">
+          <img src="img/github.png" alt="GitHub logo" width="48" height="48" loading="lazy" />
+        </div>
+        <h3>GitHub</h3>
+        <p>Code Repository</p>
         <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
           <div class="skill-fill" data-width="85%"></div>
         </div>
+        <span class="skill-percentage">85%</span>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section class="section" id="contact">
-    <h2>Contact Me - Hire Frontend Developer</h2>
-    <form action="mailto:codewithsid1998@gmail.com" method="post" enctype="text/plain" class="contact-form">
-      <label for="name" class="sr-only">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      
-      <label for="email" class="sr-only">Your Email</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      
-      <label for="message" class="sr-only">Your Message</label>
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-      
-      <button type="submit">Send Message</button>
-    </form>
+    <div class="section-header">
+      <span class="section-badge">Let's Connect</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Have a project in mind? Let's build something amazing together</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:codewithsid1998@gmail.com">codewithsid1998@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h3>Location</h3>
+            <p>Natipora, Srinagar<br>Jammu and Kashmir, India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div>
+            <h3>Available For</h3>
+            <p>Freelance Projects<br>Full-time Opportunities</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="mailto:codewithsid1998@gmail.com" method="post" enctype="text/plain" class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block">
+          <span>Send Message</span>
+          <span class="btn-icon">→</span>
+        </button>
+      </form>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
-    <p>© 2025 Shahid Gul · Frontend Engineer · Srinagar, India</p>
-    <div class="social-icons">
-      <a href="https://github.com/Shahidsid007" target="_blank" rel="noopener noreferrer" aria-label="Visit Shahid's GitHub profile">
-        <img src="img/github.png" alt="GitHub" width="32" height="32" loading="lazy">
-      </a>
-      <a href="https://facebook.com/ishahid.1998" target="_blank" rel="noopener noreferrer" aria-label="Visit Shahid's Facebook profile">
-        <img src="img/facebook.png" alt="Facebook" width="32" height="32" loading="lazy">
-      </a>
-      <a href="https://linkedin.com/in/shahid-gul-42a1691aa" target="_blank" rel="noopener noreferrer" aria-label="Visit Shahid's LinkedIn profile">
-        <img src="img/linkedin.png" alt="LinkedIn" width="32" height="32" loading="lazy">
-      </a>
-      <a href="https://instagram.com/i.mshahid___sid" target="_blank" rel="noopener noreferrer" aria-label="Visit Shahid's Instagram profile">
-        <img src="img/instagram.png" alt="Instagram" width="32" height="32" loading="lazy">
-      </a>
-      <a href="https://x.com/Imshahidsid" target="_blank" rel="noopener noreferrer" aria-label="Visit Shahid's Twitter profile">
-        <img src="img/twitter.png" alt="Twitter" width="32" height="32" loading="lazy">
-      </a>
-      <a href="https://stackoverflow.com/users/14758146" target="_blank" rel="noopener noreferrer" aria-label="Visit Shahid's Stack Overflow profile">
-        <img src="img/stackoverflow.png" alt="Stack Overflow" width="32" height="32" loading="lazy">
-      </a>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">Shahid.dev</span>
+        </div>
+        <p>Crafting beautiful web experiences</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about-section">About</a>
+          <a href="#work">Work</a>
+          <a href="#tech-stack">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://github.com/Shahidsid007" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="img/github.png" alt="GitHub" width="32" height="32" loading="lazy">
+          </a>
+          <a href="https://linkedin.com/in/shahid-gul-42a1691aa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="img/linkedin.png" alt="LinkedIn" width="32" height="32" loading="lazy">
+          </a>
+          <a href="https://facebook.com/ishahid.1998" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="img/facebook.png" alt="Facebook" width="32" height="32" loading="lazy">
+          </a>
+          <a href="https://instagram.com/i.mshahid___sid" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="img/instagram.png" alt="Instagram" width="32" height="32" loading="lazy">
+          </a>
+          <a href="https://x.com/Imshahidsid" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <img src="img/twitter.png" alt="Twitter" width="32" height="32" loading="lazy">
+          </a>
+          <a href="https://stackoverflow.com/users/14758146" target="_blank" rel="noopener noreferrer" aria-label="Stack Overflow">
+            <img src="img/stackoverflow.png" alt="Stack Overflow" width="32" height="32" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Shahid Gul · Frontend Engineer · Built with ❤️ in Srinagar, India</p>
     </div>
   </footer>
 
   <!-- MOBILE NAV -->
   <nav class="bottom-nav" role="navigation" aria-label="Mobile navigation">
-    <a href="#home"><span aria-hidden="true">🏠</span><span>Home</span></a>
-    <a href="#about-section"><span aria-hidden="true">👤</span><span>About</span></a>
-    <a href="#work"><span aria-hidden="true">💼</span><span>Work</span></a>
-    <a href="#tech-stack"><span aria-hidden="true">⚡</span><span>Skills</span></a>
-    <a href="#contact"><span aria-hidden="true">✉️</span><span>Contact</span></a>
+    <a href="#home" class="nav-item">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Home</span>
+    </a>
+    <a href="#about-section" class="nav-item">
+      <span class="nav-icon">👤</span>
+      <span class="nav-label">About</span>
+    </a>
+    <a href="#work" class="nav-item">
+      <span class="nav-icon">💼</span>
+      <span class="nav-label">Work</span>
+    </a>
+    <a href="#tech-stack" class="nav-item">
+      <span class="nav-icon">⚡</span>
+      <span class="nav-label">Skills</span>
+    </a>
+    <a href="#contact" class="nav-item">
+      <span class="nav-icon">✉️</span>
+      <span class="nav-label">Contact</span>
+    </a>
   </nav>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-to-top" aria-label="Scroll to top">
+    <span>↑</span>
+  </button>
 
   <script src="script.js"></script>
 </body>
